@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <meta name="description" content="합정 클럽 룩북의 모든 것. 위치, 시간, 드레스코드, 주차 정보까지. 합정에서 가장 핫한 클럽의 상세 정보를 확인하세요. 010-6279-0862">
+    <meta name="keywords" content="합정 클럽 정보, 합정 클럽 위치, 합정 클럽 드레스코드, 합정 클럽 시간, 합정 클럽 주차, 합정 클럽 가격, 합정 클럽 예약">
+    <meta name="author" content="t3b07-hj-club-look-1">
+    <link rel="canonical" href="https://t3b07-hj-club-look-1.vercel.app/info">
+    <meta property="og:title" content="합정 클럽 룩북 | 정보">
+    <meta property="og:description" content="합정 클럽 룩북의 모든 정보. 당신의 스타일을 증명할 장소를 확인하세요.">
+    <title>합정 클럽 룩북 | 정보</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #f5f5f5;
+            line-height: 1.6;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            color: #f5f5f5;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        a:hover {
+            opacity: 0.7;
+        }
+        img, svg {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: #888;
+            font-weight: 400;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        nav a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #aaa;
+            transition: color 0.2s ease;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .phone-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #fff !important;
+            transition: all 0.25s ease;
+        }
+        .phone-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.25);
+            opacity: 1 !important;
+        }
+        @media (max-width: 768px) {
+            nav {
+                gap: 1rem;
+            }
+            nav a:not(.phone-link) {
+                display: none;
+            }
+            .header-inner {
+                height: 60px;
+            }
+            .logo {
+                font-size: 1rem;
+            }
+        }
+        main {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+        .page-section {
+            margin-bottom: 80px;
+        }
+        .page-section:last-child {
+            margin-bottom: 0;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #888;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+        }
+        .info-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .info-card .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #666;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .info-card .value {
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        .info-card .desc {
+            font-size: 0.9rem;
+            color: #999;
+            line-height: 1.5;
+        }
+        .info-card .highlight {
+            color: #fff;
+            font-weight: 600;
+        }
+        .faq-list {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 24px 28px;
+            transition: all 0.2s ease;
+        }
+        .faq-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .faq-item .question {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .faq-item .answer {
+            font-size: 0.9rem;
+            color: #999;
+            line-height: 1.6;
+        }
+        .cta-block {
+            background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 48px 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .cta-block h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        .cta-block p {
+            color: #999;
+            max-width: 500px;
+            margin: 0 auto 24px;
+        }
+        .cta-block .phone-link {
+            display: inline-flex;
+            font-size: 1rem;
+            padding: 0.75rem 2rem;
+        }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .info-card {
+                padding: 24px 20px;
+            }
+            .info-card .value {
+                font-size: 1.15rem;
+            }
+            .cta-block {
+                padding: 36px 24px;
+            }
+            .cta-block h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">합정<span>클럽룩북</span></a>
+            <nav>
+                <a href="/">홈</a>
+                <a href="/lookbook">룩북</a>
+                <a href="/info" style="color:#fff;">정보</a>
+                <a href="/contact">문의</a>
+                <a href="tel:010-6279-0862" class="phone-link">010-6279-0862</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="page-section">
+                <h1 class="section-title">합정 클럽<br>완전 정복</h1>
+                <p class="section-subtitle">알아야 즐긴다. 합정에서 가장 강력한 클럽 씬의 모든 정보를 한방에. 위치부터 드레스코드까지, 너가 알던 정보는 가라.</p>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <span class="label">위치</span>
+                        <div class="value">합정역 2번 출구<br>도보 3분</div>
+                        <div class="desc">서울 마포구 월드컵로 3길 <span class="highlight">지하 1층</span>. 길치도 찾는다. 네이버 지도 켜고 오던가.</div>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">운영 시간</span>
+                        <div class="value">매일 21:00<br>~ 05:00</div>
+                        <div class="desc">금토는 <span class="highlight">06:00까지</span> 간다. 새벽까지 뚫을 각오해라.</div>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">드레스코드</span>
+                        <div class="value">스트릿 캐주얼<br>프리미엄</div>
+                        <div class="desc">트레이닝복 NO. <span class="highlight">가죽자켓, 부츠, 체인</span>. 너의 베스트 룩을 입고 와라. 깐죽은 거절한다.</div>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">입장료</span>
+                        <div class="value">남 20,000원<br>여 15,000원</div>
+                        <div class="desc">선착순 할인 있음. <span class="highlight">룩북 인증 시 5,000원 할인</span>. 증명하고 깎아라.</div>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">주차</span>
+                        <div class="value">전용 주차장<br>30대</div>
+                        <div class="desc">협소하다. <span class="highlight">대중교통 강력 추천</span>. 차 끌고 오면 눈치 싸움 각오해라.</div>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">예약</span>
+                        <div class="value">테이블 &<br>VIP 부스</div>
+                        <div class="desc">단체 예약 필수. <span class="highlight">010-6279-0862</span>로 전화해라. DM은 무시한다.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section">
+                <h2 class="section-title">자주 묻는<br>개소리</h2>
+                <p class="section-subtitle">너가 궁금해할 만한 것들. 근데 답은 이미 정해져 있다.</p>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="question">입구에서 줄 서야 하나요?</div>
+                        <div class="answer">당연하지. 근데 룩북 보고 온 사람은 패스트 패스. 증명하고 들어와라. 줄 서기 싫으면 일찍 오던가.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">처음 가도 괜찮나요?</div>
+                        <div class="answer">처음? 문제 없다. 대신 첫인상이 중요하다. 너의 스타일을 증명해라. 분위기 파악 빠르게 하고 바로 즐겨라.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">여자 혼자 가도 되나요?</div>
+                        <div class="answer">환영한다. 오히려 더 자유롭게 즐길 수 있다. 스태프들이 케어해준다. 근데 눈치 보지 말고 당당하게 놀아라.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">사진 촬영 가능한가요?</div>
+                        <div class="answer">가능하다. 근데 플래시 터트리지 마라. 분위기 깬다. 자연스럽게 찍어라. 그리고 무단 도용은 절대 금지.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">환불 규정이 어떻게 되나요?</div>
+                        <div class="answer">입장 후 환불은 없다. 신중하게 결정해라. 우리는 퀄리티를 보장한다. 너가 문제면 너 잘못이다.</div>
+                    </div>
+                </div>
+
+                <div class="cta-block">
+                    <h3>아직도 망설여?</h3>
+                    <p>합정에서 가장 강력한 클럽 경험. 너의 스타일을 증명할 시간이다. 지금 바로 전화해라.</p>
+                    <a href="tel:010-6279-0862" class="phone-link">010-6279-0862</a>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
