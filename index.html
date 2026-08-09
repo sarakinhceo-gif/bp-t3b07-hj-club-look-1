@@ -1,212 +1,210 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-ledger-sepia">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>합정 클럽 룩북 — 처음 방문자를 위한 조건별 선택 안내</title>
-    <meta name="description" content="합정 클럽 룩북에 대한 정보를 제공합니다. 처음 방문자를 위한 조건별 선택 안내를 제공합니다.">
-    <meta name="keywords" content="합정 클럽, 룩북, 처음 방문자, 조건별 선택">
-    <link rel="canonical" href="https://hapjeong-club-tip.program-school.online/">
-    <meta property="og:title" content="합정 클럽 룩북 — 처음 방문자를 위한 조건별 선택 안내">
-    <meta property="og:description" content="합정 클럽 룩북에 대한 정보를 제공합니다. 처음 방문자를 위한 조건별 선택 안내를 제공합니다.">
-    <meta property="og:url" content="https://hapjeong-club-tip.program-school.online/">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f5f0e8;
-            color: #2c2416;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-        .v-head-eolt {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 32px 24px 16px;
-            border-bottom: 2px solid #c4b998;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-        .v-head-eolt .site-id {
-            font-size: 1.75rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: #3a2e1a;
-        }
-        .v-head-eolt nav {
-            display: flex;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-        .v-head-eolt nav a {
-            text-decoration: none;
-            color: #5c4a2e;
-            font-weight: 500;
-            font-size: 0.95rem;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s;
-        }
-        .v-head-eolt nav a:hover {
-            border-bottom-color: #8b6f3f;
-        }
-        .r-side-sdg9 {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 48px;
-        }
-        .r-side-sdg9 h2 {
-            font-size: 1.5rem;
-            font-weight: 650;
-            margin-top: 0;
-            color: #3a2e1a;
-            border-left: 4px solid #8b6f3f;
-            padding-left: 14px;
-        }
-        .t-body-q4hv {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 24px 0;
-            background-color: #faf7f0;
-            border: 1px solid #d6c9a8;
-        }
-        .t-body-q4hv th, .t-body-q4hv td {
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid #e3d6b7;
-            font-size: 0.95rem;
-        }
-        .t-body-q4hv th {
-            background-color: #e7ddc5;
-            font-weight: 650;
-            color: #2c2416;
-        }
-        .main-content section {
-            margin-bottom: 44px;
-        }
-        .main-content p {
-            margin: 0 0 16px;
-            font-size: 1rem;
-            color: #3f3624;
-        }
-        .sidebar-box {
-            background: #faf7f0;
-            border: 1px solid #d6c9a8;
-            padding: 20px;
-            margin-bottom: 28px;
-            border-radius: 2px;
-        }
-        .sidebar-box h3 {
-            margin-top: 0;
-            font-size: 1.1rem;
-            font-weight: 650;
-            color: #2f2416;
-        }
-        .sidebar-box ul {
-            padding-left: 18px;
-            margin: 0;
-            color: #4a3e28;
-        }
-        .sidebar-box li {
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-        }
-        @media (max-width: 768px) {
-            .r-side-sdg9 {
-                grid-template-columns: 1fr;
-            }
-            .r-side-sdg9 h2 {
-                font-size: 1.35rem;
-            }
-            .v-head-eolt {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>합정 클럽 룩북 — 처음 방문자를 위한 조건별 선택 안내</title>
+ <meta name="description" content="합정 클럽 룩북에 대한 정보를 제공합니다. 처음 방문자를 위한 조건별 선택 안내를 제공합니다.">
+ <meta name="keywords" content="합정 클럽, 룩북, 처음 방문자, 조건별 선택">
+ <link rel="canonical" href="https://hapjeong-club-tip.program-school.online/">
+ <meta property="og:title" content="합정 클럽 룩북 — 처음 방문자를 위한 조건별 선택 안내">
+ <meta property="og:description" content="합정 클럽 룩북에 대한 정보를 제공합니다. 처음 방문자를 위한 조건별 선택 안내를 제공합니다.">
+ <meta property="og:url" content="https://hapjeong-club-tip.program-school.online/">
+ <style>
+ body {
+ margin: 0;
+ padding: 0;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+ background-color: #f5f0e8;
+ color: #2c2416;
+ line-height: 1.7;
+ -webkit-font-smoothing: antialiased;
+ }
+ .v-head-eolt {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 32px 24px 16px;
+ border-bottom: 2px solid #c4b998;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: flex-end;
+ }
+ .v-head-eolt .site-id {
+ font-size: 1.75rem;
+ font-weight: 700;
+ letter-spacing: -0.5px;
+ color: #3a2e1a;
+ }
+ .v-head-eolt nav {
+ display: flex;
+ gap: 28px;
+ flex-wrap: wrap;
+ }
+ .v-head-eolt nav a {
+ text-decoration: none;
+ color: #5c4a2e;
+ font-weight: 500;
+ font-size: 0.95rem;
+ padding-bottom: 4px;
+ border-bottom: 2px solid transparent;
+ transition: border-color 0.2s;
+ }
+ .v-head-eolt nav a:hover {
+ border-bottom-color: #8b6f3f;
+ }
+ .r-side-sdg9 {
+ max-width: 1100px;
+ margin: 40px auto;
+ padding: 0 24px;
+ display: grid;
+ grid-template-columns: 1fr 300px;
+ gap: 48px;
+ }
+ .r-side-sdg9 h2 {
+ font-size: 1.5rem;
+ font-weight: 650;
+ margin-top: 0;
+ color: #3a2e1a;
+ border-left: 4px solid #8b6f3f;
+ padding-left: 14px;
+ }
+ .t-body-q4hv {
+ width: 100%;
+ border-collapse: collapse;
+ margin: 24px 0;
+ background-color: #faf7f0;
+ border: 1px solid #d6c9a8;
+ }
+ .t-body-q4hv th, .t-body-q4hv td {
+ padding: 12px 16px;
+ text-align: left;
+ border-bottom: 1px solid #e3d6b7;
+ font-size: 0.95rem;
+ }
+ .t-body-q4hv th {
+ background-color: #e7ddc5;
+ font-weight: 650;
+ color: #2c2416;
+ }
+ .main-content section {
+ margin-bottom: 44px;
+ }
+ .main-content p {
+ margin: 0 0 16px;
+ font-size: 1rem;
+ color: #3f3624;
+ }
+ .sidebar-box {
+ background: #faf7f0;
+ border: 1px solid #d6c9a8;
+ padding: 20px;
+ margin-bottom: 28px;
+ border-radius: 2px;
+ }
+ .sidebar-box h3 {
+ margin-top: 0;
+ font-size: 1.1rem;
+ font-weight: 650;
+ color: #2f2416;
+ }
+ .sidebar-box ul {
+ padding-left: 18px;
+ margin: 0;
+ color: #4a3e28;
+ }
+ .sidebar-box li {
+ margin-bottom: 10px;
+ font-size: 0.95rem;
+ }
+ @media (max-width: 768px) {
+ .r-side-sdg9 {
+ grid-template-columns: 1fr;
+ }
+ .r-side-sdg9 h2 {
+ font-size: 1.35rem;
+ }
+ .v-head-eolt {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 12px;
+ }
+ }
+ </style>
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-    <div class="v-head-eolt">
-        <span class="site-id">합정 클럽 룩북</span>
-        <nav class="nav-present">
-            <a href="#">홈</a>
-            <a href="#">룩북</a>
-            <a href="#">입장팁</a>
-            <a href="#">테이블</a>
-            <a href="#">FAQ</a>
-        </nav>
-    </div>
+ <div class="v-head-eolt">
+ <span class="site-id">합정 클럽 룩북</span>
+ <nav class="nav-present">
+ <a href="#">홈</a>
+ <a href="#">룩북</a>
+ <a href="#">입장팁</a>
+ <a href="#">테이블</a>
+ <a href="#">FAQ</a>
+ </nav>
+ </div>
 
-    <div class="r-side-sdg9">
-        <div class="main-content">
-            <section>
-                <h2>입장 전에 룩북부터 확인해야 하는 이유</h2>
-                <p>합정 클럽 씬은 겉으로 보기엔 자유로워 보이지만, 실제로는 암묵적인 복장 규율이 존재한다. 티셔츠와 운동화만으로 입장이 거절되는 경우는 드물지만, 피크 타임에는 도어 스태프의 판단이 더 엄격해진다. 룩북은 단순한 패션 제안이 아니라, 그날의 분위기를 읽고 통과 가능성을 높이는 전략 도구다. 합정 지역 클럽들은 각자 지향하는 바이브가 다르기 때문에, 같은 올블랙이라도 소재와 실루엣에 따라 어울리는 공간이 갈린다.</p>
-                <p>처음 방문자라면 더욱 주의해야 할 점은, SNS에 떠도는 후기 사진과 실물 무드의 괴리다. 조명과 인파 속에서는 생각보다 화려한 디테일이 묻히고, 반대로 과한 악세서리가 검색대에서 문제가 될 수 있다. 룩북을 참고하면 불필요한 시행착오를 줄이고, 시간대에 맞는 무드 전환까지 계산할 수 있다.</p>
-            </section>
+ <div class="r-side-sdg9">
+ <div class="main-content">
+ <section>
+ <h2>입장 전에 룩북부터 확인해야 하는 이유</h2>
+ <p>합정 클럽 씬은 겉으로 보기엔 자유로워 보이지만, 실제로는 암묵적인 복장 규율이 존재한다. 티셔츠와 운동화만으로 입장이 거절되는 경우는 드물지만, 피크 타임에는 도어 스태프의 판단이 더 엄격해진다. 룩북은 단순한 패션 제안이 아니라, 그날의 분위기를 읽고 통과 가능성을 높이는 전략 도구다. 합정 지역 클럽들은 각자 지향하는 바이브가 다르기 때문에, 같은 올블랙이라도 소재와 실루엣에 따라 어울리는 공간이 갈린다.</p>
+ <p>처음 방문자라면 더욱 주의해야 할 점은, SNS에 떠도는 후기 사진과 실물 무드의 괴리다. 조명과 인파 속에서는 생각보다 화려한 디테일이 묻히고, 반대로 과한 악세서리가 검색대에서 문제가 될 수 있다. 룩북을 참고하면 불필요한 시행착오를 줄이고, 시간대에 맞는 무드 전환까지 계산할 수 있다.</p>
+ </section>
 
-            <section>
-                <h2>조건별 룩북 선택 분기점</h2>
-                <p>목적이 '입장 자체'에만 있는 것인지, 혹은 '네트워킹'까지 염두에 둔 것인지에 따라 룩북의 방향이 완전히 달라진다. 단순히 음악을 즐기고 싶다면 기능성과 편안함을 우선시하는 룩이 효과적이다. 하지만 바이어, 크루, 포토그래퍼를 의식한다면 시그니처 아이템을 하나 더하는 것이 결과를 바꾼다. 합정 클럽의 특성상, 새벽 2시 이후의 네트워킹 구역에서는 옷차림이 대화의 출발점이 되는 경우가 빈번하다.</p>
-                <p>시간대 역시 룩북의 레이어를 결정하는 변수다. 오픈 런 시간대에는 과도한 레이어드가 오히려 클로크룸 줄에서 발목을 잡는다. 반면 피크타임인 12시에서 1시 사이에는 아우터의 존재감이 입장 속도와 직결된다. 룩북은 이처럼 시점에 따라 달라지는 전술을 미리 정리해두었다.</p>
-            </section>
+ <section>
+ <h2>조건별 룩북 선택 분기점</h2>
+ <p>목적이 '입장 자체'에만 있는 것인지, 혹은 '네트워킹'까지 염두에 둔 것인지에 따라 룩북의 방향이 완전히 달라진다. 단순히 음악을 즐기고 싶다면 기능성과 편안함을 우선시하는 룩이 효과적이다. 하지만 바이어, 크루, 포토그래퍼를 의식한다면 시그니처 아이템을 하나 더하는 것이 결과를 바꾼다. 합정 클럽의 특성상, 새벽 2시 이후의 네트워킹 구역에서는 옷차림이 대화의 출발점이 되는 경우가 빈번하다.</p>
+ <p>시간대 역시 룩북의 레이어를 결정하는 변수다. 오픈 런 시간대에는 과도한 레이어드가 오히려 클로크룸 줄에서 발목을 잡는다. 반면 피크타임인 12시에서 1시 사이에는 아우터의 존재감이 입장 속도와 직결된다. 룩북은 이처럼 시점에 따라 달라지는 전술을 미리 정리해두었다.</p>
+ </section>
 
-            <section>
-                <h2>룩북이 다루는 세부 기준</h2>
-                <p>합정 클럽 룩북은 단순히 옷의 조합만 나열하지 않는다. 신발의 재질, 가방의 크기, 악세서리의 소재까지 구체적인 통과 데이터를 기반으로 구성되었다. 특히 금속성 악세서리는 검색대에서의 지연을 유발하기 때문에, 룩북에서는 대안으로 레진 소재나 패브릭 벨트를 권장한다. 또한, 클럽 내부 온도와 습도를 고려한 이너웨어 선택까지 포함한다. 이것은 겉모습만 신경 쓰다가 내부에서 불편을 겪는 초보 방문자의 흔한 실수를 방지한다.</p>
-                <p>한 가지 간과되는 포인트는 '백'의 선택이다. 크로스백은 힙합 류를 선호하는 공간에서 유리하지만, 미니멀 테크노 계열에서는 불필요한 부피로 인식될 수 있다. 룩북은 각 클럽의 음악 장르와 공간 동선까지 고려하여 가방의 형태와 소재를 추천한다. 이는 외관상의 조화를 넘어, 실제 동선에서의 편의성과 보안 절차까지 반영한 결과다.</p>
-            </section>
+ <section>
+ <h2>룩북이 다루는 세부 기준</h2>
+ <p>합정 클럽 룩북은 단순히 옷의 조합만 나열하지 않는다. 신발의 재질, 가방의 크기, 악세서리의 소재까지 구체적인 통과 데이터를 기반으로 구성되었다. 특히 금속성 악세서리는 검색대에서의 지연을 유발하기 때문에, 룩북에서는 대안으로 레진 소재나 패브릭 벨트를 권장한다. 또한, 클럽 내부 온도와 습도를 고려한 이너웨어 선택까지 포함한다. 이것은 겉모습만 신경 쓰다가 내부에서 불편을 겪는 초보 방문자의 흔한 실수를 방지한다.</p>
+ <p>한 가지 간과되는 포인트는 '백'의 선택이다. 크로스백은 힙합 류를 선호하는 공간에서 유리하지만, 미니멀 테크노 계열에서는 불필요한 부피로 인식될 수 있다. 룩북은 각 클럽의 음악 장르와 공간 동선까지 고려하여 가방의 형태와 소재를 추천한다. 이는 외관상의 조화를 넘어, 실제 동선에서의 편의성과 보안 절차까지 반영한 결과다.</p>
+ </section>
 
-            <section>
-                <h2>초보자를 위한 룩북 활용 전략</h2>
-                <p>처음 방문자는 룩북을 그대로 복사하는 것을 두려워할 필요가 없다. 오히려 그게 가장 합리적인 접근이다. 다만, 자신의 체형과 피부톤에 따라 셔츠의 톱을 조정하는 정도의 변형은 필요하다. 룩북이 제안하는 '기준선'을 지키되, 신발 하나만으로도 개성을 낼 수 있는 여지가 있다. 예를 들어, 전제적인 어두운 톤의 룩에 포인트 컬러의 스니커즈를 매치하는 것은 대부분의 합정 클럽에서 수용된다.</p>
-                <p>대부분의 첫 방문객이 겪는 실수는 '너무 많은 것을 동시에 보여주려는' 것이다. 룩북의 핵심은 절제다. 클럽이라는 공간은 조명과 어둠 속에서 옷의 디테일보다 실루엣과 질감이 더 크게 작용한다. 따라서 룩북은 과도한 장식보다는 소재의 대비, 레이어의 깊이에 집중하라고 강조한다. 이 원칙을 이해하면, 예산을 낭비하지 않고도 실패 확률을 현저히 줄일 수 있다.</p>
-            </section>
+ <section>
+ <h2>초보자를 위한 룩북 활용 전략</h2>
+ <p>처음 방문자는 룩북을 그대로 복사하는 것을 두려워할 필요가 없다. 오히려 그게 가장 합리적인 접근이다. 다만, 자신의 체형과 피부톤에 따라 셔츠의 톱을 조정하는 정도의 변형은 필요하다. 룩북이 제안하는 '기준선'을 지키되, 신발 하나만으로도 개성을 낼 수 있는 여지가 있다. 예를 들어, 전제적인 어두운 톤의 룩에 포인트 컬러의 스니커즈를 매치하는 것은 대부분의 합정 클럽에서 수용된다.</p>
+ <p>대부분의 첫 방문객이 겪는 실수는 '너무 많은 것을 동시에 보여주려는' 것이다. 룩북의 핵심은 절제다. 클럽이라는 공간은 조명과 어둠 속에서 옷의 디테일보다 실루엣과 질감이 더 크게 작용한다. 따라서 룩북은 과도한 장식보다는 소재의 대비, 레이어의 깊이에 집중하라고 강조한다. 이 원칙을 이해하면, 예산을 낭비하지 않고도 실패 확률을 현저히 줄일 수 있다.</p>
+ </section>
 
-            <section>
-                <h2>시간대별 룩북 변환 가이드</h2>
-                <p>저녁 9시에서 10시 사이의 얼리 버드 시간대는 아직 클럽 내부가 완전히 형성되기 전이므로, 비교적 실험적인 룩도 용인되는 편이다. 하지만 이 시간대의 룩북은 '이동성'을 중시해야 한다. 합정역에서 도보로 이동하는 구간과, 입장 전 대기 시간을 고려해 외투의 탈부착이 쉬운 구조를 권장한다. 11시 이후로는 본격적으로 분위기가 전환되며, 이때부터 룩북은 '시선 집중'을 위한 요소를 강조한다.</p>
-                <p>새벽 2시 이후는 완전히 다른 동물적 감각이 지배한다. 룩북은 이 시간대를 위한 별도의 '레이트 나이트 에디션'을 제시하는데, 주로 이너웨어의 변형을 통한 분위기 전환을 다룬다. 재킷을 벗거나, 슈즈를 갈아 신는 정도의 미세한 변화가 후반부의 존재감을 결정한다. 같은 공간 안에서도 시간에 따라 요구되는 옷의 기능과 메시지가 달라진다는 점을 룩북은 분명히 한다.</p>
-            </section>
-        </div>
+ <section>
+ <h2>시간대별 룩북 변환 가이드</h2>
+ <p>저녁 9시에서 10시 사이의 얼리 버드 시간대는 아직 클럽 내부가 완전히 형성되기 전이므로, 비교적 실험적인 룩도 용인되는 편이다. 하지만 이 시간대의 룩북은 '이동성'을 중시해야 한다. 합정역에서 도보로 이동하는 구간과, 입장 전 대기 시간을 고려해 외투의 탈부착이 쉬운 구조를 권장한다. 11시 이후로는 본격적으로 분위기가 전환되며, 이때부터 룩북은 '시선 집중'을 위한 요소를 강조한다.</p>
+ <p>새벽 2시 이후는 완전히 다른 동물적 감각이 지배한다. 룩북은 이 시간대를 위한 별도의 '레이트 나이트 에디션'을 제시하는데, 주로 이너웨어의 변형을 통한 분위기 전환을 다룬다. 재킷을 벗거나, 슈즈를 갈아 신는 정도의 미세한 변화가 후반부의 존재감을 결정한다. 같은 공간 안에서도 시간에 따라 요구되는 옷의 기능과 메시지가 달라진다는 점을 룩북은 분명히 한다.</p>
+ </section>
+ </div>
 
-        <aside class="sidebar">
-            <div class="sidebar-box">
-                <h3>빠른 선택 표</h3>
-                <table class="t-body-q4hv">
-                    <tr><th>상황</th><th>추천 스타일</th></tr>
-                    <tr><td>첫 방문</td><td>올블랙 미니멀</td></tr>
-                    <tr><td>테이블 예약</td><td>스마트 캐주얼</td></tr>
-                    <tr><td>네트워킹 목적</td><td>시그니처 포인트</td></tr>
-                    <tr><td>늦은 입장</td><td>레이어드 제거형</td></tr>
-                </table>
-            </div>
-            <div class="sidebar-box">
-                <h3>룩북 체크리스트</h3>
-                <ul>
-                    <li>신발 소재 확인</li>
-                    <li>악세서리 금속 여부</li>
-                    <li>외투 탈부착 용이성</li>
-                    <li>클럽 장르와의 일치</li>
-                    <li>시간대별 무드 매치</li>
-                </ul>
-            </div>
-            <div class="sidebar-box">
-                <h3>주의 클럽 특성</h3>
-                <p style="font-size:0.9rem; color:#4a3e28;">합정 클럽은 입장 심사가 까다롭기로 유명하다. 특히 주말 피크 타임에는 룩북 기준을 벗어난 경우 입장이 거부될 확률이 높다. 대기 줄에서 오래 기다리지 않으려면 사전에 룩북을 숙지하는 것이 필수다.</p>
-            </div>
-        </aside>
-    </div>
+ <aside class="sidebar">
+ <div class="sidebar-box">
+ <h3>빠른 선택 표</h3>
+ <table class="t-body-q4hv">
+ <tr><th>상황</th><th>추천 스타일</th></tr>
+ <tr><td>첫 방문</td><td>올블랙 미니멀</td></tr>
+ <tr><td>테이블 예약</td><td>스마트 캐주얼</td></tr>
+ <tr><td>네트워킹 목적</td><td>시그니처 포인트</td></tr>
+ <tr><td>늦은 입장</td><td>레이어드 제거형</td></tr>
+ </table>
+ </div>
+ <div class="sidebar-box">
+ <h3>룩북 체크리스트</h3>
+ <ul>
+ <li>신발 소재 확인</li>
+ <li>악세서리 금속 여부</li>
+ <li>외투 탈부착 용이성</li>
+ <li>클럽 장르와의 일치</li>
+ <li>시간대별 무드 매치</li>
+ </ul>
+ </div>
+ <div class="sidebar-box">
+ <h3>주의 클럽 특성</h3>
+ <p style="font-size:0.9rem; color:#4a3e28;">합정 클럽은 입장 심사가 까다롭기로 유명하다. 특히 주말 피크 타임에는 룩북 기준을 벗어난 경우 입장이 거부될 확률이 높다. 대기 줄에서 오래 기다리지 않으려면 사전에 룩북을 숙지하는 것이 필수다.</p>
+ </div>
+ </aside>
+ </div>
 </body>
 </html>
